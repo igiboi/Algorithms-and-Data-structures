@@ -24,3 +24,16 @@ function sumZero(arr) {
     }
   }
 }
+
+// starting two pointers on the left side 
+function countUniqueValues(arr){
+    if(arr.length === 0) return 0;
+    let i = 0;
+    for(var j=1; j<arr.length; j++) {
+        if(arr[j] !== arr[i]) {
+          i++;
+          arr[i] = arr[j]
+        }
+    }    
+    return i+1;  
+}
